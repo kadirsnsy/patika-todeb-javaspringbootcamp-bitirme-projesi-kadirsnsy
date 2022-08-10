@@ -1,0 +1,1 @@
+package com.ksensoy.creditapplicationsystem.model.repository;
