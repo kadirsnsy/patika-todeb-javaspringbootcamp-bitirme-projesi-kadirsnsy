@@ -16,11 +16,11 @@ public class SampleDataInitiliazer implements ApplicationRunner {
     private final UserService userService;
 
     @Override
-    public void run(ApplicationArguments args) { 
+    public void run(ApplicationArguments args) {
         // Creating a sample Admin USER
         User adminUser = new User("admin-user", "adminuser@mail.com", "pass1234");
 
-        if(adminUser.getUsername() != null && !adminUser.getUsername().isEmpty()){
+        if (adminUser.getUsername() != null && !adminUser.getUsername().isEmpty()) {
             // @NotNull && @NotEmpty = @NotBlank
         }
 

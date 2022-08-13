@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer,Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 /*    Optional<Customer> getCustomerByPhone(String phone);
     Optional<Customer> getCustomerById_number(String id_number);
     List<Optional<Customer>> getCustomerByFirst_nameAndLast_name(String first_name, String last_name);

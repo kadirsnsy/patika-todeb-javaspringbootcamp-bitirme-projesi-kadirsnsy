@@ -4,8 +4,8 @@ import com.ksensoy.creditapplicationsystem.model.dto.CustomerDTO;
 import com.ksensoy.creditapplicationsystem.model.entity.Customer;
 
 public class CustomerMapper {
-    public static CustomerDTO toDTO(Customer customer){
-        CustomerDTO customerDTO=  new CustomerDTO();
+    public static CustomerDTO toDTO(Customer customer) {
+        CustomerDTO customerDTO = new CustomerDTO();
         customerDTO.setId_number(customer.getId_number());
         customerDTO.setFirst_name(customer.getFirst_name());
         customerDTO.setLast_name(customer.getLast_name());
@@ -15,8 +15,8 @@ public class CustomerMapper {
         return customerDTO;
     }
 
-    public static Customer toEntity(CustomerDTO customerDTO){
-        Customer customer= new Customer();
+    public static Customer toEntity(CustomerDTO customerDTO) {
+        Customer customer = new Customer();
         customer.setId_number(customerDTO.getId_number());
         customer.setFirst_name(customerDTO.getFirst_name());
         customer.setLast_name(customerDTO.getLast_name());

@@ -21,12 +21,13 @@ public class CustomerController {
 
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CLIENT')")
     @GetMapping("/all")
-    public ResponseEntity getAllCustomer(){
-        List<Customer>  customers= customerService.getAllCustomers();
-        logger.info(customers.size()+ " customers listed");
+    public ResponseEntity getAllCustomer() {
+        List<Customer> customers = customerService.getAllCustomers();
+        logger.info(customers.size() + " customers listed");
 
         return ResponseEntity.ok(customers);
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/add")
     public ResponseEntity createNewCourse(@RequestBody CustomerDTO customer) {

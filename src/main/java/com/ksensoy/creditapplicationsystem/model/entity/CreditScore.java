@@ -26,12 +26,12 @@ public class CreditScore {
     @OneToOne(cascade = CascadeType.MERGE)
     @JoinTable(
             name = "customer_credit_score",
-            joinColumns={
+            joinColumns = {
                     @JoinColumn(name = "credit_score_id")
-           },
+            },
             inverseJoinColumns = {
                     @JoinColumn(name = "customer_id")
             }
     )
-    private  Customer customer;
+    private Customer customer;
 }

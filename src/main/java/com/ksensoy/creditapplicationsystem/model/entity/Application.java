@@ -32,5 +32,5 @@ public class Application {
                     @JoinColumn(name = "customer_id")
             }
     )
-    private  Customer customer;
+    private Customer customer;
 }

@@ -1,5 +1,6 @@
 package com.ksensoy.creditapplicationsystem.model.entity;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,19 +25,21 @@ public class Customer {
     @Column(nullable = false)
     private String last_name;
 
-    @Size(min = 11, max = 11)
+    // TODO test sonrası yorum satırı kaldırılacak
+    //  @Size(min = 11, max = 11)
     @Column(nullable = false)
     private String id_number;
 
-    @Size(min = 10, max = 10)
+    // TODO test sonrası yorum satırı kaldırılacak
+   // @Size(min = 10, max = 10)
     @Column(nullable = false)
-    private  String phone;
+    private String phone;
 
     @Column(nullable = false)
-    private int  monthly_income;
+    private int monthly_income;
 
-    @OneToOne(mappedBy = "customer",cascade = CascadeType.MERGE)
-    private  Application application;
+    @OneToOne(mappedBy = "customer", cascade = CascadeType.MERGE)
+    private Application application;
 
     @OneToOne(mappedBy = "customer", cascade = CascadeType.MERGE)
     private CreditScore creditScore;

@@ -15,12 +15,13 @@ public class CustomerService {
 
     private final CustomerRepository customerRepository;
 
-    public List<Customer> getAllCustomers(){
-        List<Customer> allCustomers= customerRepository.findAll();
-        return  allCustomers;
+    public List<Customer> getAllCustomers() {
+        List<Customer> allCustomers = customerRepository.findAll();
+        return allCustomers;
     }
+
     public Customer addCustomer(CustomerDTO customerDTO) {
-        Customer customer= CustomerMapper.toEntity(customerDTO);
+        Customer customer = CustomerMapper.toEntity(customerDTO);
         customerRepository.save(customer);
         return customer;
     }
